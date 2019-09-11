@@ -1,6 +1,6 @@
 library(ggplot2)
 
-dd <- read.table("tests/test1.csv", fileEncoding = "UTF-8", header = TRUE,
+dd <- read.csv("tests/test1.csv", fileEncoding = "UTF-8", header = TRUE,
                  sep = ",")
 
 new_colnames <- lapply(colnames(dd), function(name){
