@@ -14,9 +14,13 @@ colnames(dd) <- new_colnames
 # print(typeof(dd))
 # print(typeof(dt))
 
-# g <- ggplot(dd, aes(x=)) + geom_line()
+x_axis <- sym(colnames(dd)[1])
+y_axis <- sym(colnames(dd)[2])
 
-# plot(g)
+g <- ggplot(dd, aes(x=!!x_axis, y=!!y_axis)) +
+  geom_line(color="seagreen")
+
+plot(g)
 
 # test_files <- list.files("tests", pattern = "*.csv", full.names = TRUE,
 #                          recursive = FALSE)
